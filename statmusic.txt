@@ -1,0 +1,50 @@
+HowTo StatMusic
+
+PART 1: Install all the necessary stuff
+---------------------------------------
+(do this only once)
+
+1. Download the Haskell Platform (full) for Windows:
+   https://www.haskell.org/platform/
+   
+2. Install by following the instructions provided.
+
+3. Download & Install GitHub Desktop for Windows
+   https://desktop.github.com/
+
+4. Open Git Shell from Start Menu
+
+5. Type "git clone https://github.com/jbetzend/statMusic.git" and hit return
+
+6. Type "cabal update", press return, wait for it to finish
+
+
+PART 2: Update Software
+-----------------------
+(do this every time there's a new version)
+
+0. Open PowerShell or Git Shell
+
+1. Navigate to git repository
+   (probable command for this : "cd C:\Users\YOURUSERNAME\Documents\GitHub\statMusic" or similar)
+   ("cd" stands for "change directory")
+   
+2. Pull update from GitHub
+   (Command: "git pull")
+   If it says "Already up-to-date!" everything is fine
+   
+3. Build executable file from source code
+   (Command: "cabal build")
+
+4. Run executable with path to input as first command line parameter
+   (like so: "cabal run C:\Users\YOURUSERNAME\whatever\path\leads\to\your\document.xml")   
+
+PART 3: Possible Errors:
+------------------------
+
+0. If anything goes wrong, drop the maintainer a line.
+   (Please include any error messages or dubious outputs)
+
+1. Dependency not found
+   If cabal complains about a missing dependency or somesuch, try these commands
+   "cabal update" followed by "cabal install --only-dependencies", then try again.
