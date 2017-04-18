@@ -26,6 +26,6 @@ data Note = Rest Duration | Note Pitch Duration (Maybe Accidental)
 instance Show Note where
   show (Note (o,s,_) d ma) = case ma of
     Nothing        -> (show s) ++ ' ':';':(show o) ++ ';':(show d)
-    (Just Natural) -> (show s) ++ '♮':';':(show o) ++ ';':(show d)
-    (Just Sharp)   -> (show s) ++ '♯':';':(show o) ++ ';':(show d)
-    (Just Flat)    -> (show s) ++ '♭':';':(show o) ++ ';':(show d)
+    (Just Natural) -> (show s) ++ '~':';':(show o) ++ ';':(show d)
+    (Just Sharp)   -> (show s) ++ '#':';':(show o) ++ ';':(show d)
+    (Just Flat)    -> (show s) ++ 'b':';':(show o) ++ ';':(show d)
